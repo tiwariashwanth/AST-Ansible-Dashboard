@@ -1,0 +1,24 @@
+---
+    
+#Create or update a template deployment based on uris using parameter and template links
+- name: Create Azure Deploy
+  hosts: localhost
+  tasks:
+   - azure.azcollection.azure_rm_deployment:
+      resource_group: atAnsibleTestRG004
+      name: myDeployment004
+      location: eastus
+      template_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-dashboard-ansible/main/arm/sql/azuredeploy.json'
+      parameters_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-dashboard-ansible/main/arm/sql/azuredeploy.parameters.json'
+
+# #Create or update a Dashboard using parameter and template links
+# - name: Create Azure Deploy
+#   hosts: localhost
+#   tasks:
+#    - azure.azcollection.azure_rm_deployment:
+#       resource_group: atDashboardTestRG001
+#       name: atDashboardDeployment001
+#       location: eastus
+#       template_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-dashboard-ansible/ansible-dashboard-arm/arm/dashboard-arm/template.json'
+#       parameters_link: 'https://github.com/tiwariashwanth/AST-dashboard-ansible/blob/ansible-dashboard-arm/arm/dashboard-arm/parameters.json'
+
