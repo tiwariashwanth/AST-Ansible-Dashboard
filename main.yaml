@@ -8,8 +8,8 @@
       resource_group: atAnsibleTestRG004
       name: myDeployment004
       location: eastus
-      template_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-dashboard-ansible/main/arm/sql/azuredeploy.json'
-      parameters_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-dashboard-ansible/main/arm/sql/azuredeploy.parameters.json'
+      template_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/main/arm/sql/azuredeploy.json'
+      parameters_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/main/arm/sql/azuredeploy.parameters.json'
 
 # #Create or update a Dashboard using parameter and template links
 # - name: Create Azure Deploy

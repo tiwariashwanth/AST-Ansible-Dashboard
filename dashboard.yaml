@@ -8,6 +8,6 @@
       resource_group: atDashboardTestRG1
       name: atDashboardDeployment1
       location: eastus
-      template_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-dashboard-ansible/ansible-dashboard-arm/arm/dashboard-arm/template.json'
-      parameters_link: 'https://github.com/tiwariashwanth/AST-dashboard-ansible/blob/ansible-dashboard-arm/arm/dashboard-arm/parameters.json'
+      template_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/main/arm/dashboard-arm/azuredeploy.json'
+      parameters_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/main/arm/dashboard-arm/azuredeploy.parameters.json'
 
