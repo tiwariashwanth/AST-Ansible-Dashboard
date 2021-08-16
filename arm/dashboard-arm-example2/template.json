@@ -1,9 +1,9 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {
+   "parameters": {
         "dashboardname": {
-            // "defaultValue": "3ffe4be2-73ca-4ce1-a07d-ae53e23540a0",
+            "defaultValue": "ansibledashboard",
             "type": "String"
         }
     },
@@ -15,7 +15,7 @@
             "name": "[parameters('dashboardname')]",
             "location": "eastus",
             "tags": {
-                "hidden-title": "Template-Dashboard-01"
+                "hidden-title": "ansibledashboard"
             },
             "properties": {
                 "lenses": [
