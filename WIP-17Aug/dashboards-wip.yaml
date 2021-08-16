@@ -1,27 +1,13 @@
 ---
 #Create or update a Dashboard using parameter and template links
-# - name: Create Azure Deploy
-#   hosts: localhost
-#   tasks:
-#    - azure.azcollection.azure_rm_deployment:
-#       resource_group: atDashboardTestRG2
-#       name: atDashboardDeployment2
-#       location: eastus
-#       template_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/main/arm/dashboard-json/sql-ansible-test.json'
-#       parameters_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/main/arm/dashboard-json/parameters.json'
-
 - name: Create Azure Deploy
-  azure_rm_deployment:
-    resource_group: atDashboardTestRG3
-    name: atDashboardDeployment3
-    parameters:
-      dashboardname:
-        value: dashboardansible-wip-json
-      subscriptionId:
-        value: bfba7d97-7864-445c-9b1f-75d94abbf5ff
-      region:
-        value: eastus
-      location:
-        value: East US       
-    template_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/main/WIP-17Aug/dashboard-wip-json/sql-ansible-test.json'
+  hosts: localhost
+  tasks:
+   - azure.azcollection.azure_rm_deployment:
+      resource_group: atDashboardTestRG3
+      name: atDashboardDeployment3
+      parameters:
+       dashboardname:
+         value: dashboardansible-wip-json        
+      template_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/main/WIP-17Aug/dashboard-wip-json/sql-ansible-test.json'
  
