@@ -23,5 +23,5 @@
         value: eastus
       location:
         value: East US       
-    template_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/main/arm/dashboard-json/sql-ansible-test.json'
+    template_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/main/WIP-17Aug/dashboard-wip-json/sql-ansible-test.json'
  
