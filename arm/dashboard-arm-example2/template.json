@@ -1,0 +1,98 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "dashboards_3ffe4be2_73ca_4ce1_a07d_ae53e23540a0_name": {
+            "defaultValue": "3ffe4be2-73ca-4ce1-a07d-ae53e23540a0",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Portal/dashboards",
+            "apiVersion": "2020-09-01-preview",
+            "name": "[parameters('dashboards_3ffe4be2_73ca_4ce1_a07d_ae53e23540a0_name')]",
+            "location": "eastus",
+            "tags": {
+                "hidden-title": "Template-Dashboard-01"
+            },
+            "properties": {
+                "lenses": [
+                    {
+                        "order": 0,
+                        "parts": [
+                            {
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "rowSpan": 4,
+                                    "colSpan": 6
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+                                    "settings": {
+                                        "content": {}
+                                    }
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 6,
+                                    "y": 0,
+                                    "rowSpan": 2,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/HubsExtension/PartType/ClockPart",
+                                    "settings": {}
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 6,
+                                    "y": 3,
+                                    "rowSpan": 4,
+                                    "colSpan": 5
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/HubsExtension/PartType/VideoPart",
+                                    "settings": {
+                                        "content": {}
+                                    }
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 0,
+                                    "y": 4,
+                                    "rowSpan": 4,
+                                    "colSpan": 6
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+                                    "settings": {
+                                        "content": {}
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "metadata": {
+                    "model": {}
+                }
+            }
+        }
+    ]
+}
