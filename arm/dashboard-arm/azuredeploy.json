@@ -15,7 +15,7 @@
             "name": "[parameters('dashboardname')]",
             "location": "East US",
             "tags": {
-                "hidden-title": "dashboardname"
+                "hidden-title": "dashboardansibletest04"
             },
             "properties": {
                 "lenses": [
