@@ -1,0 +1,9 @@
+arm:
+  "location": "australiaeast"
+  "subscriptionId": "{{ subscriptionId }}"
+  "dashboardname": "{{ dashboardname }}"
+  dev:
+    "environment": "development"
+       
+  test:
+    "environment": "test"

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+     "environment": {
+      "value": "{{ arm['%s' | format(env)].environment }}"
+    },
+
+   "subscriptionId": {
+      "value": "{{ arm.subscriptionId }}"
+    },
+    
+    "location": {
+      "value": "{{ arm.location }}"
+    },
+
+    "dashboardname": {
+      "value": "{{ arm.dashboardname }}"
+    }
+     
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+     "environment": {
+      "value": "development"
+    },
+
+   "subscriptionId": {
+      "value": "bfba7d97-7864-445c-9b1f-75d94abbf5ff"
+    },
+    
+    "location": {
+      "value": "australiaeast"
+    },
+
+    "dashboardname": {
+      "value": "devdashansible002"
+    }
+     
+  }
+}
