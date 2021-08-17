@@ -1,5 +1,6 @@
 arm:
-  "location": "eastus"
+  "location": "australiaeast"
+  "subscriptionId": "{{ subscriptionId }}"
   "dashboardname": "{{ dashboardname }}"
   dev:
     "environment": "development"

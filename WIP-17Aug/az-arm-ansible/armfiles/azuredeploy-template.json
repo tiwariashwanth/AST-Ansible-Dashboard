@@ -7,6 +7,10 @@
      "environment" : {
        "type" : "string"
        },
+      
+      "subscriptionId" : {
+       "type" : "string"
+       },
            
       "location": {
       "type" : "string"       
@@ -60,7 +64,7 @@
                             "region": "eastus",
                             "resourceType": "microsoft.sql/servers/databases",
                             "subscription": {
-                              "subscriptionId": "bfba7d97-7864-445c-9b1f-75d94abbf5ff",
+                              "subscriptionId": "[parameters('subscriptionId')]",
                               "displayName": "MSDN-ATiwari",
                               "uniqueDisplayName": "MSDN-ATiwari"
                             }
@@ -132,7 +136,7 @@
                             "region": "eastus",
                             "resourceType": "microsoft.sql/servers/databases",
                             "subscription": {
-                              "subscriptionId": "bfba7d97-7864-445c-9b1f-75d94abbf5ff",
+                              "subscriptionId": "[parameters('subscriptionId')]",
                               "displayName": "MSDN-ATiwari",
                               "uniqueDisplayName": "MSDN-ATiwari"
                             }
