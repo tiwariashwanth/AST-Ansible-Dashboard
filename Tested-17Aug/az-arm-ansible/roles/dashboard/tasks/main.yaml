@@ -15,13 +15,30 @@
 #       parameters: azuredeploy.parameters.json        
 #       template_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/main/WIP-17Aug/dashboard-wip-json/sql-ansible-test.json'
 
-- name: Deploy ARM template
-  shell: az deployment group create \
-    --name {{deployname}} \
-    --resource-group {{ rgname }} \
-    --template-uri "https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/feature/at/parameterize/Tested-17Aug/az-arm-ansible/armfiles/azuredeploy-template.json" \
-    --parameters @azuredeploy.parameters.json
-  register: deploy
+- name: Create Azure Deploy
+  azure_rm_deployment:
+    resource_group: {{ rgname }}
+    name: {{deployname}}
+    parameters:
+      dashboardname:
+        value: {{ dashboardname }}
+      env:
+        value: {{ env }}
+      subscriptionId:
+        value: {{ subscriptionId }}          
+    template_link: "https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/feature/at/parameterize/Tested-17Aug/az-arm-ansible/armfiles/azuredeploy-template.json"
+  register: azure
+
+
+
+
+# - name: Deploy ARM template
+#   shell: az deployment group create \
+#     --name {{deployname}} \
+#     --resource-group {{ rgname }} \
+#     --template-uri "https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/feature/at/parameterize/Tested-17Aug/az-arm-ansible/armfiles/azuredeploy-template.json" \
+#     --parameters @azuredeploy.parameters.json
+#   register: deploy
 
 
 - name: Output
