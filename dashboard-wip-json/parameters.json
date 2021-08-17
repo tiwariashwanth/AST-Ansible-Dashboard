@@ -2,8 +2,15 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+        "siteName": {
+      "value": "dev"
+    },
+      "location": {
+      "value": "australiaeast"
+    },
         "dashboardname": {
-            "value": "dashboardansibletest-json"
+            "defaultValue": "ansibledashboard-json",
+            "type": "String"
         }
     }
 }

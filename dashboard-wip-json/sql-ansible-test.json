@@ -3,8 +3,15 @@
  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+        "siteName": {
+      "defaultValue": "[parameters('siteName')]"
+    },
+      "location": {
+       "defaultValue": "[parameters('location')]"
+      
+    },
         "dashboardname": {
-            "defaultValue": "ansibledashboard-json",
+            "defaultValue": "[parameters('dashboardname')]",
             "type": "String"
         }
     },
@@ -386,11 +393,11 @@
       }
     }
   },
-  "name": "dashboardsql-ansible-test01",
-  "type": "Microsoft.Portal/dashboards",
-  "location": "East US",
+  "name": "[parameters('dashboardname')]",
+  "type": "Microsoft.Portal/dashboards", 
+  "location": "[parameters('location')]",
   "tags": {
-    "hidden-title": "dashboardsql-ansible-test01"
+    "hidden-title": "[parameters('dashboardname')]"
   },
   "apiVersion": "2015-08-01-preview"
 }
