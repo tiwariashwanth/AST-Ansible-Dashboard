@@ -1,5 +1,5 @@
 arm:
-  "Location": "australiaeast"
+  "location": "australiaeast"
   "dashboardname": "{{ dashboardname }}"
   dev:
     "environment": "development"
