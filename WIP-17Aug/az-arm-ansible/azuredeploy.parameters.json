@@ -5,13 +5,17 @@
      "environment": {
       "value": "development"
     },
+
+   "subscriptionId": {
+      "value": "22948ddf-2944-4f5e-b416-0b01a5e8145d"
+    },
     
     "location": {
       "value": "australiaeast"
     },
 
     "dashboardname": {
-      "value": "devdashansible003"
+      "value": "devdashansible002"
     }
      
   }
