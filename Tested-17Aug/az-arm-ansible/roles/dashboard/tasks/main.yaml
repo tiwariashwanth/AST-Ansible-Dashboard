@@ -16,20 +16,20 @@
 #       template_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/main/WIP-17Aug/dashboard-wip-json/sql-ansible-test.json'
 
 - name: Create Azure Deploy
-  azure_rm_deployment:
-    resource_group: {{ rgname }}
-    name: {{deployname}}
+  azure.azcollection.azure_rm_deployment:
+    resource_group: "{{ rgname }}"
+    name: "{{ deployname }}"
     parameters:
       dashboardname:
-        value: {{ dashboardname }}
-      env:
-        value: {{ env }}
+        value: "{{ dashboardname }}"
+      environment:
+        value: "{{ env }}"
       subscriptionId:
-        value: {{ subscriptionId }}          
+        value: "{{ subscriptionId }}"
+      location:
+        value: " {{ location }}"
     template_link: "https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/feature/at/parameterize/Tested-17Aug/az-arm-ansible/armfiles/azuredeploy-template.json"
   register: azure
-
-
 
 
 # - name: Deploy ARM template
@@ -41,6 +41,6 @@
 #   register: deploy
 
 
-- name: Output
-  debug:
-    msg: "{{ deploy.stdout }}"
+# - name: Output
+#   debug:
+#     msg: "{{ deploy.stdout }}"
