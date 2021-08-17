@@ -1,8 +1,8 @@
 arm:
-  siteLocation: "australiaeast"
+  "Location": "australiaeast"
   "dashboardname": "{{ dashboardname }}"
   dev:
-    environment: "development"
+    "environment": "development"
        
   test:
-    environment: "test"
+    "environment": "test"

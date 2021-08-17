@@ -3,15 +3,15 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
      "environment": {
-      "value": "{{ arm['%s' | format(env)].environment }}"
+      "value": "test"
     },
     
     "location": {
-      "value": "{{ arm.Location }}"
+      "value": "australiaeast"
     },
 
     "dashboardname": {
-      "value": "{{ arm.dashboardname }}"
+      "value": "testdashansible002"
     }
      
   }
