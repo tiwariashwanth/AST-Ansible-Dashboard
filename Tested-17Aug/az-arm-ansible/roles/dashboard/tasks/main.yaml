@@ -4,17 +4,7 @@
     src: templates/azuredeploy.parameters.j2
     dest: "azuredeploy.parameters.json"
 
-
-# #Create or update a Dashboard using parameter and template links
-# - name: Create Azure Deploy
-#   # hosts: localhost
-#   tasks:
-#    - azure.azcollection.azure_rm_deployment:
-#       resource_group: atDashboardTestRG3
-#       name: atDashboardDeployment3
-#       parameters: azuredeploy.parameters.json        
-#       template_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/main/WIP-17Aug/dashboard-wip-json/sql-ansible-test.json'
-
+#Option 2 - Using azcollection way
 - name: Create Azure Deploy
   azure.azcollection.azure_rm_deployment:
     resource_group: "{{ rgname }}"
@@ -31,6 +21,7 @@
     template_link: "https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/feature/at/parameterize/Tested-17Aug/az-arm-ansible/armfiles/azuredeploy-template.json"
   register: azure
 
+# Option 1 - Deploying Azure Dashboard using ARM template and parameter file. Parameter file is generated using Jinja2 and parameters supplied during ansible playbook run
 
 # - name: Deploy ARM template
 #   shell: az deployment group create \
