@@ -2,15 +2,17 @@
   
  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {    
-         
+    "parameters": { 
+     
+     "environment" : {
+       "type" : "string"
+       },
+           
       "location": {
-      "value": "[parameters('location')]",
-       "defaultValue": "[parameters('location')]"       
+      "type" : "string"       
     },
         "dashboardname": {
-            "defaultValue": "[parameters('dashboardname')]",
-            "type": "String"
+          "type": "string"
         }
     },
    "variables": {},
