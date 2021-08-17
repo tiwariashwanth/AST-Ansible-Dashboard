@@ -4,7 +4,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "environment": {
-      "defaultValue": "[parameters('siteName')]"
+      "defaultValue": "[parameters('environment')]"
     },
       "location": {
        "defaultValue": "[parameters('location')]"
