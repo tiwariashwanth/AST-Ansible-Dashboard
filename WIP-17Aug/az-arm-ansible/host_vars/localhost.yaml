@@ -1,0 +1,6 @@
+arm:
+  siteLocation: "australiaeast"
+  dev:
+    siteName: "dev"     
+  test:
+    siteName: "test"

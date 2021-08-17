@@ -1,0 +1,29 @@
+---
+- name: Create parameters
+  template:
+    src: templates/azuredeploy.parameters.j2
+    dest: "azuredeploy.parameters.json"
+
+
+# #Create or update a Dashboard using parameter and template links
+# - name: Create Azure Deploy
+#   # hosts: localhost
+#   tasks:
+#    - azure.azcollection.azure_rm_deployment:
+#       resource_group: atDashboardTestRG3
+#       name: atDashboardDeployment3
+#       parameters: azuredeploy.parameters.json        
+#       template_link: 'https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/main/WIP-17Aug/dashboard-wip-json/sql-ansible-test.json'
+
+- name: Deploy ARM template
+  shell: az deployment group create \
+    --name AnsibleDeployment \
+    --resource-group atDashboardTestRG3 \
+    --template-uri "https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/main/WIP-17Aug/dashboard-wip-json/sql-ansible-test.json" \
+    --parameters @azuredeploy.parameters.json
+  register: deploy
+
+
+- name: Output
+  debug:
+    msg: "{{ deploy.stdout }}"
