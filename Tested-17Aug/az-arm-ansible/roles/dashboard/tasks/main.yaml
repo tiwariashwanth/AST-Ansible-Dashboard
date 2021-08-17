@@ -19,7 +19,7 @@
   shell: az deployment group create \
     --name {{deployname}} \
     --resource-group {{ rgname }} \
-    --template-uri "https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/jinja-ansible-arm/WIP-17Aug/az-arm-ansible/armfiles/azuredeploy-template.json" \
+    --template-uri "https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/feature/at/parameterize/Tested-17Aug/az-arm-ansible/armfiles/azuredeploy-template.json" \
     --parameters @azuredeploy.parameters.json
   register: deploy
 
