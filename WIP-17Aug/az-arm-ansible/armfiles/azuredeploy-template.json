@@ -5,6 +5,7 @@
     "parameters": {    
          
       "location": {
+      "value": "[parameters('location')]",
        "defaultValue": "[parameters('location')]"       
     },
         "dashboardname": {
