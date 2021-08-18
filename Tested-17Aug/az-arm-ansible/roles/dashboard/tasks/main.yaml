@@ -11,7 +11,7 @@
     name: "{{ deployname }}"
     parameters:
       dashboardname:
-        value: "{{ dev.dashboardname }}"
+        value: "{{ arm.dev.dashboardname }}"
       environment:
         value: "{{ env }}"
       subscriptionId:
