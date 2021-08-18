@@ -18,6 +18,6 @@
 
 `ansible-playbook deploy.yaml -e env=dev -e dashboardname=devdashansible002 -e deployname=atansibledeployment010 -e subscriptionId="bfba7d97-7864-445c-9b1f-75d94abbf5ff" -e rgname=atDashboardTestRG3 -vvv`
 
-### Added AZCollection in the main.yaml. To run playbook
+### Added AZCollection in the main.yaml. To run playbook, use -vvv to run in verbose mode
 
-`ansible-playbook deploy.yaml -e env=dev -e dashboardname=devdashazcoll002 -e deployname=devdashazdeployment010 -e subscriptionId="bfba7d97-7864-445c-9b1f-75d94abbf5ff" -e rgname="atDashboardTestRG4" -e location="australiaeast" -vvv`
+`ansible-playbook deploy.yaml -e env=dev -e dashboardname=devdashazcoll002 -e deployname=devdashazdeployment010 -e subscriptionId="bfba7d97-7864-445c-9b1f-75d94abbf5ff" -e rgname="atDashboardTestRG4" -e location="australiaeast"`

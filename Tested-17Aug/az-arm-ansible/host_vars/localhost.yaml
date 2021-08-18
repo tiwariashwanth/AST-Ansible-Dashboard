@@ -1,9 +1,11 @@
 arm:
   "location": "australiaeast"
   "subscriptionId": "{{ subscriptionId }}"
-  "dashboardname": "{{ dashboardname }}"
+  # "dashboardname": "{{ dashboardname }}"
   dev:
     "environment": "development"
-       
+    "dashboardname": "devdashboardansible"     
   test:
     "environment": "test"
+
+##dev and test WIP

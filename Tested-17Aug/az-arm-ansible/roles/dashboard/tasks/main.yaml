@@ -11,13 +11,14 @@
     name: "{{ deployname }}"
     parameters:
       dashboardname:
-        value: "{{ dashboardname }}"
+        value: "{{ dev.dashboardname }}"
       environment:
         value: "{{ env }}"
       subscriptionId:
         value: "{{ subscriptionId }}"
       location:
         value: " {{ location }}"
+    # can add something template_uri for the below
     template_link: "https://raw.githubusercontent.com/tiwariashwanth/AST-Ansible-Dashboard/feature/at/parameterize/Tested-17Aug/az-arm-ansible/armfiles/azuredeploy-template.json"
   register: azure
 
